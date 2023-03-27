@@ -1,1 +1,1 @@
-# sql-learning-journey
+# sql-learning-path
