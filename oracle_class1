@@ -1,7 +1,5 @@
 -- SQL Plus
 -- 1. Create a table named 'employee_demo' for the 'scott' user
-scott14/tiger@ora19c
-
 set line 200 pages 1000
 
 create table employees_demo
