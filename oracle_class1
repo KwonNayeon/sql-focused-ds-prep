@@ -1,5 +1,7 @@
 -- SQL Plus
 -- 1. Create a table named 'employee_demo' for the 'scott' user
+
+-- Set the format for the output of the SELECT statement.
 set line 200 pages 1000
 
 create table employees_demo
