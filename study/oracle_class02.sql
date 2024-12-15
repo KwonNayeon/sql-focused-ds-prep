@@ -1,5 +1,3 @@
--- Uploading the file from SQL Plus didn't work, so I decided to edit the file directly on Github.
-
 -- Set the format for the output of the SELECT statement.
 set pages 1000 line 200
 
