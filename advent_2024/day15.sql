@@ -11,11 +11,6 @@
 --    - 이를 보완하기 위해 반납(`return_station_id`) 데이터도 함께 포함시키도록 `UNION ALL`을 사용.
 --      - `UNION ALL`을 사용하면 중복 제거 없이 모든 대여 및 반납 데이터를 통합하여 정류소별 사용량을 계산할 수 있음.
 
--- 3. 추가 개선 사항:
---    - `merged` CTE에서 `usage_pct` 계산 로직 개선:
---      - 기존에는 0으로 나누는 오류가 발생할 가능성이 있었음.
---      - 이를 방지하기 위해 `CASE WHEN COALESCE(A.usage_count, 0) > 0 THEN ... ELSE NULL` 조건을 추가.
-
 -- 최종 쿼리:
 --    - 정류소의 2019년 10월 사용량이 2018년 10월 사용량의 50% 이하인 정류소를 조회.
 --    - 결과는 사용량 감소율(usage_pct)이 큰 순서대로 정렬됨.
@@ -65,11 +60,7 @@ merged AS (
         COALESCE(A.station_id, B.station_id) AS station_id,
         COALESCE(A.usage_count, 0) AS usage_2018,
         COALESCE(B.usage_count, 0) AS usage_2019,
-        CASE 
-            WHEN COALESCE(A.usage_count, 0) > 0 
-            THEN ROUND((COALESCE(B.usage_count, 0) * 100.0) / A.usage_count, 2)
-            ELSE NULL
-        END AS usage_pct
+        ROUND((COALESCE(B.usage_count, 0) * 100.0) / A.usage_count, 2) AS usage_pct
     FROM usage_2018 A
     FULL OUTER JOIN usage_2019 B 
         ON A.station_id = B.station_id
@@ -86,4 +77,4 @@ JOIN merged m
 WHERE m.usage_pct <= 50 
     AND m.usage_2018 > 0 
     AND m.usage_2019 > 0
-ORDER BY m.usage_pct DESC;
+;
