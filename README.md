@@ -12,7 +12,6 @@ This repository contains my solutions and notes for various SQL challenges, usin
 ## Structure
 ```
 ├── README.md
-├── notes.md           # Quick troubleshooting notes and learnings
 └── queries/
     ├── day01.sql
     ├── day02.sql
