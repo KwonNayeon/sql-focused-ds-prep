@@ -33,5 +33,6 @@ A personal error log and solution repository for technical interview preparation
 - Emphasis is placed on SQL due to its relevance in technical interviews, but other areas are included for comprehensive preparation.  
 
 ## Resources
+- [Book Official Website](https://www.acethedatascienceinterview.com)
 - [PostgreSQL 14 Documentation](https://www.postgresql.org/docs/14/index.html)  
 - [Python Official Documentation](https://docs.python.org/3/)
