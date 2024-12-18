@@ -12,7 +12,7 @@ This repository documents my journey preparing for data science technical interv
 
 ## Upcoming Challenges
 📚 **Technical Interview Preparation**
-- SQL: [DataLemur](https://datalemur.com/questions) problems (PostgreSQL 14)
+- SQL: [DataLemur](https://datalemur.com) problems (PostgreSQL 14)
 - Python: Coding challenges
 - Statistics: Probability & Statistical concepts
 - ML: Core machine learning concepts
@@ -39,7 +39,7 @@ This repository documents my journey preparing for data science technical interv
 ## Resources
 - [SQLite Documentation](https://sqlite.org/docs.html)
 - [PostgreSQL 14 Documentation](https://www.postgresql.org/docs/14/index.html)
-- [DataLemur SQL Questions](https://datalemur.com/questions)
+- [DataLemur SQL Questions](https://datalemur.com)
 - ["Ace the Data Science Interview" Official Site](https://www.acethedatascienceinterview.com)
 
 ## Progress Tracking
