@@ -32,8 +32,9 @@ This repository documents my journey preparing for data science technical interv
 │   ├── python/          # Python coding questions
 │   ├── statistics/      # Statistics & Probability
 │   └── ml/              # Machine Learning concepts
-└── study/               # Personal study notes
-    └── class_notes.sql  # Notes from previous SQL classes
+└── study/                 # Personal SQL study notes  
+    ├── oracle_class01.sql  
+    └── oracle_class02.sql # Notes from previous SQL classes 
 ```
 
 ## Resources
