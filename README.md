@@ -20,15 +20,18 @@ This repository contains my solutions and notes for various SQL challenges, usin
 
 ## Structure
 ```
-├── README.md
-├── advent_2024/          # SQLite solutions
-│   ├── day01.sql
-│   ├── ...              # day02 ~ day18 completed
-│   ├── day18.sql
-│   ├── day19.sql        # pending (day19 ~ day24)
-│   └── day25.sql
-└── interview_prep/       # PostgreSQL solutions
-    └── README.md        # will contain problem categories and solutions
+├── README.md  
+├── advent_2024/           # SQLite solutions  
+│   ├── day01.sql  
+│   ├── ...                # day02 ~ day18 completed  
+│   ├── day18.sql  
+│   ├── day19.sql          # pending (day19 ~ day24)  
+│   └── day25.sql  
+├── interview_prep/        # PostgreSQL solutions  
+│   └── README.md          # Problem categories and solutions (in progress)  
+└── study/                 # Personal SQL study notes  
+    ├── oracle_class01.sql  
+    └── oracle_class02.sql # Notes from previous SQL classes  
 ```
 
 ## Resources
