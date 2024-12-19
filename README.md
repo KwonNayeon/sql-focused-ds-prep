@@ -10,7 +10,6 @@ This repository contains my solutions and notes for various SQL challenges and i
 - Progress: Day 1-18 completed, Day 19-25 pending
 - Engine: SQLite
 
-## Upcoming Challenge
 📚 **Technical Interview Preparation**
 - Primary Focus: SQL problems from DataLemur (PostgreSQL 14)
 - Additional Areas: Python, Statistics, ML concepts
@@ -21,9 +20,9 @@ This repository contains my solutions and notes for various SQL challenges and i
 ├── README.md
 ├── advent_2024/          # SQLite solutions
 │   ├── day01.sql
-│   ├── ...              # day02 ~ day18 completed
-│   ├── day18.sql
-│   ├── day19.sql        # pending (day19 ~ day24)
+│   ├── ...              # day02 ~ day19 completed
+│   ├── day19.sql
+│   ├── day20.sql        # pending (day20 ~ day24)
 │   └── day25.sql
 ├── interview_prep/       # See interview_prep/README.md for details
 │   ├── sql/             # PostgreSQL solutions
@@ -32,7 +31,7 @@ This repository contains my solutions and notes for various SQL challenges and i
 │   └── ml/              # Machine Learning concepts
 └── study/                 # Personal SQL study notes  
     ├── oracle_class01.sql  
-    └── oracle_class02.sql # Notes from previous SQL classes 
+    └── oracle_class02.sql # Notes from previous SQL classes
 ```
 
 ## Resources
