@@ -15,7 +15,12 @@ A personal error log and solution repository for technical interview preparation
 ## Structure
 ```plaintext
 ├── sql/
-│   └── solutions.sql    # SQL solutions and notes
+│   ├── easy/
+│   │   ├── histogram_of_tweets.sql
+│   │   ├── unfinished_parts.sql
+│   │   └── ...
+│   ├── medium/
+│   └── hard/
 ├── python/
 │   └── solutions.py     # Python coding challenges
 ├── statistics/
@@ -33,6 +38,7 @@ A personal error log and solution repository for technical interview preparation
 - Emphasis is placed on SQL due to its relevance in technical interviews, but other areas are included for comprehensive preparation
 
 ## Resources
-- [Ace the Data Science Interview - Official Site](https://www.acethedatascienceinterview.com)
 - [PostgreSQL 14 Documentation](https://www.postgresql.org/docs/14/index.html)
 - [Python Official Documentation](https://docs.python.org/3/)
+- [Ace the Data Science Interview - Official Site](https://www.acethedatascienceinterview.com)
+- [DataLemur SQL Questions](https://datalemur.com/questions)
