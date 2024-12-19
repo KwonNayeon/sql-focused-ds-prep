@@ -40,5 +40,5 @@ A personal error log and solution repository for technical interview preparation
 ## Resources
 - [PostgreSQL 14 Documentation](https://www.postgresql.org/docs/14/index.html)
 - [Python Official Documentation](https://docs.python.org/3/)
-- [Ace the Data Science Interview - Official Site](https://www.acethedatascienceinterview.com)
 - [DataLemur SQL Questions](https://datalemur.com/questions)
+- ["Ace the Data Science Interview" Official Site](https://www.acethedatascienceinterview.com)
