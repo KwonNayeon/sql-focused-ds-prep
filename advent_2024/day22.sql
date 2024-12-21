@@ -40,9 +40,9 @@ WITH friends AS (
     FROM edges
 )
 SELECT 
-    A.user_id, 
-    COUNT(B.friend_id) AS num_friends
-FROM users A
-LEFT JOIN friends B ON A.user_id = B.user_id
-GROUP BY A.user_id
-ORDER BY num_friends DESC, A.user_id ASC;
+    u.user_id, 
+    COUNT(f.friend_id) AS num_friends
+FROM users u
+LEFT JOIN friends f ON u.user_id = f.user_id
+GROUP BY u.user_id
+ORDER BY num_friends DESC, u.user_id ASC;
