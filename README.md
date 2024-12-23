@@ -20,9 +20,9 @@ This repository contains my solutions and notes for various SQL challenges and i
 ├── README.md
 ├── advent_2024/          # SQLite solutions
 │   ├── day01.sql
-│   ├── ...              # day02 ~ day19 completed
-│   ├── day19.sql
-│   ├── day20.sql        # pending (day20 ~ day24)
+│   ├── ...              # day02 ~ day23 completed
+│   ├── day23.sql
+│   ├── day24.sql        # pending (day24 ~ day25)
 │   └── day25.sql
 ├── interview_prep/       # See interview_prep/README.md for details
 │   ├── sql/             # PostgreSQL solutions
