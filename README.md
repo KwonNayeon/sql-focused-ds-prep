@@ -7,7 +7,7 @@ This repository contains my solutions and notes for various SQL challenges and i
 ## Current Challenge
 🎅 **Advent of SQL 2024**
 - Challenge Link: [Advent of SQL 2024](https://solvesql.com/collections/advent-of-sql-2024/)
-- Progress: Day 1-18 completed, Day 19-25 pending
+- Progress: Day 1-23 completed, Day 24-25 pending
 - Engine: SQLite
 
 📚 **Technical Interview Preparation**
