@@ -26,12 +26,12 @@ This repository contains my solutions and notes for various SQL challenges and i
 │   └── day25.sql
 ├── interview_prep/       # See interview_prep/README.md for details
 │   ├── sql/             # PostgreSQL solutions
-│   ├── python/          # Python coding questions
+│   ├── python/          # Python coding challenges
 │   ├── statistics/      # Statistics & Probability
 │   └── ml/              # Machine Learning concepts
 └── study/                 # Personal SQL study notes  
-    ├── oracle_class01.sql  
-    └── oracle_class02.sql # Notes from previous SQL classes
+    ├── oracle_class01.sql
+    └── oracle_class02.sql
 ```
 
 ## Resources

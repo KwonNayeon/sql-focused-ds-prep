@@ -22,7 +22,7 @@ A personal error log and solution repository for technical interview preparation
 │   ├── medium/
 │   └── hard/
 ├── python/
-│   └── solutions.py     # Python coding challenges
+│   └── factorial_formula.py     # Python coding challenges
 ├── statistics/
 │   └── notes.md        # Statistical concepts and problem-solving steps
 └── ml/
