@@ -5,31 +5,29 @@ Personal repository for SQL problem solving practice and technical interview pre
 This repository contains my solutions and notes for various SQL challenges and interview preparation materials. While SQL is the primary focus, it also includes other technical interview topics for data science positions.
 
 ## Current Challenge
-🎅 **Advent of SQL 2024**
-- Challenge Link: [Advent of SQL 2024](https://solvesql.com/collections/advent-of-sql-2024/)
-- Progress: Day 1-23 completed, Day 24-25 pending
-- Engine: SQLite
-
-📚 **Technical Interview Preparation**
+🎯 **Technical Interview Preparation**
 - Primary Focus: SQL problems from DataLemur (PostgreSQL 14)
 - Additional Areas: Python, Statistics, ML concepts
 - Based on: "Ace the Data Science Interview"
 
+✨ **Recently Completed**
+- Advent of SQL 2024: All 25 days solved! 
+- Platform: SQLite
+- Link: [Advent of SQL 2024](https://solvesql.com/collections/advent-of-sql-2024/)
+
 ## Structure
 ```plaintext
 ├── README.md
-├── advent_2024/          # SQLite solutions
+├── advent_2024/          # SQLite solutions (Completed!)
 │   ├── day01.sql
-│   ├── ...              # day02 ~ day23 completed
-│   ├── day23.sql
-│   ├── day24.sql        # pending (day24 ~ day25)
-│   └── day25.sql
+│   ├── ...              # day02 ~ day24
+│   └── day25.sql        
 ├── interview_prep/       # See interview_prep/README.md for details
 │   ├── sql/             # PostgreSQL solutions
 │   ├── python/          # Python coding challenges
 │   ├── statistics/      # Statistics & Probability
 │   └── ml/              # Machine Learning concepts
-└── study/                 # Personal SQL study notes  
+└── study/               # Personal SQL study notes  
     ├── oracle_class01.sql
     └── oracle_class02.sql
 ```
