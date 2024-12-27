@@ -1,6 +1,6 @@
 -- ============================================================
 -- [트러블슈팅 노트] Sending vs. Opening Snaps
--- Filename: sending_vs._opening_snaps.sql
+-- Filename: activity_time_ratio_by_age.sql
 -- 
 -- [1] 목표:
 --   - activities와 age_breakdown 테이블을 연결하여 연령대별 활동 시간 비율 분석
