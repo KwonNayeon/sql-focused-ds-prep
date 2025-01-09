@@ -79,3 +79,20 @@ WITH top_10_cte AS (
 SELECT artist_name, artist_rank
 FROM top_10_cte
 WHERE artist_rank <= 5;
+
+-- [다시 풀어본 것]
+with data as (
+  select
+    A.artist_name,
+    dense_rank() over (order by count(B.song_id) desc) as artist_rank
+  from artists A 
+  join songs B on A.artist_id = B.artist_id
+  join global_song_rank C on B.song_id = C.song_id
+  where C.rank <= 10
+  group by A.artist_name
+)
+select
+  artist_name,
+  artist_rank
+from data
+where artist_rank <= 5
