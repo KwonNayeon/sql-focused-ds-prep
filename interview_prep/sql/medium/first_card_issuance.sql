@@ -8,19 +8,21 @@
 --
 -- [2] 문제 상황과 해결 과정:
 --   1. 초기 접근의 어려움:
---      - WHERE절에서 직접 MIN(issue_year)를 사용하려 시도
---      - GROUP BY 없이 aggregate function 사용 불가 에러 발생
+--      - WHERE IN 절을 사용하여 최초 발급 데이터 추출 시도
+--      - 연도와 월을 별도로 비교하는 방식의 한계
 --      
---   2. WHERE IN 절을 활용한 해결:
---      - 서브쿼리에서 각 카드별 최초 발급 시점(연도,월) 추출
---      - 카드명, 연도, 월을 한번에 비교하여 최초 발급 데이터 획득
+--   2. Window 함수를 활용한 해결:
+--      - make_date()로 연도와 월을 날짜 형식으로 변환
+--      - partition by와 min() window 함수로 카드별 최초 발급일 계산
+--      - CTE를 활용하여 코드 가독성 향상
 --
 -- [3] 학습 포인트:
---   - WHERE절에서 aggregate function 직접 사용 불가
---   - 서브쿼리를 통한 그룹별 최솟값 비교 방법
---   - WHERE IN과 복합 컬럼 조건 활용
+--   - make_date() 함수를 통한 날짜 데이터 변환
+--   - Window 함수와 partition by를 활용한 그룹별 집계
+--   - CTE(Common Table Expression)를 통한 쿼리 구조화
 -- ============================================================
 
+-- My Solution (Passed but needs improvement)
 SELECT
   card_name,
   issued_amount
@@ -35,3 +37,20 @@ where (card_name, issue_year, issued_amount) in
   )
 order by issued_amount desc
 ;
+
+-- Optimal Solution
+with card_launch as (
+  SELECT
+    card_name,
+    issued_amount,
+    make_date(issue_year, issue_month, 1) as issue_date,
+    min(make_date(issue_year, issue_month, 1)) over (
+      partition by card_name) as launch_date
+  from monthly_cards_issued
+)
+SELECT
+  card_name,
+  issued_amount
+from card_launch
+where issue_date = launch_date
+order by issued_amount desc
