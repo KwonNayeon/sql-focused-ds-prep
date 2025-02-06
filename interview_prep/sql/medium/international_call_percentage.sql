@@ -1,3 +1,17 @@
+-- ============================================================
+-- [트러블슈팅 노트] International Call 비율 계산
+-- Filename: international_call_percentage.sql
+-- 
+-- [1] 목표:
+--   - 전체 통화 중 international call의 비율을 계산
+--   - 발신자와 수신자의 국가가 다른 경우를 international call로 정의
+--
+-- [2] JOIN 전략:
+--   - phone_info 테이블을 두 번 JOIN하여 발신/수신 국가 정보 획득
+--   - caller JOIN: 발신자의 국가 정보
+--   - receiver JOIN: 수신자의 국가 정보
+-- ============================================================
+
 -- My answer
 with data as (
  SELECT
