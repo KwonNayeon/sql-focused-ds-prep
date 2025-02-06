@@ -54,3 +54,5 @@ SELECT
 from card_launch
 where issue_date = launch_date
 order by issued_amount desc
+;
+
