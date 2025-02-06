@@ -27,6 +27,7 @@ with data as (
 SELECT
  round(100.0 * international_calls::decimal/total_calls, 1) as international_calls_pct
 from data
+ ;
 
 -- Solution
 SELECT
@@ -40,3 +41,4 @@ left join phone_info as caller
  on calls.caller_id = caller.caller_id
 left join phone_info as receiver
  on calls.receiver_id = receiver.caller_id
+;
