@@ -25,7 +25,7 @@
 --     * 순번이 부여된 결과에서 조건 필터링
 --     * 중첩 쿼리 구조의 이해와 활용
 -- ============================================================
-
+-- 첫 번째 풀이
 SELECT 
     user_id, 
     spend, 
@@ -39,3 +39,20 @@ FROM (
     FROM transactions
 ) ranked
 WHERE rn = 3;
+
+-- 2025/02/17 풀이
+WITH data AS (
+   SELECT
+       user_id,
+       spend,
+       transaction_date,
+       ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY transaction_date) AS rn
+   FROM transactions
+)
+SELECT
+   user_id,
+   spend,
+   transaction_date
+FROM data 
+WHERE rn = 3
+;
