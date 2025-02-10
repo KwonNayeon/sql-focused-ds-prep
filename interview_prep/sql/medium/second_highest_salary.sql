@@ -26,6 +26,7 @@
 --     * 정확한 순위 산출을 위한 전처리
 -- ============================================================
 
+-- 첫 번째 풀이
 WITH data AS (
    SELECT DISTINCT salary
    FROM employee
@@ -34,3 +35,16 @@ WITH data AS (
 )
 SELECT * 
 FROM data;
+
+-- 2025/02/10 풀이
+with data as (
+  SELECT
+    dense_rank() over (order by salary desc) as rn,
+    salary
+  from employee
+)
+SELECT
+  salary
+from data
+where rn = 2
+;
