@@ -22,33 +22,28 @@ Print nodes at each level of a binary tree on separate lines.
 from collections import deque
 
 def print_tree_levels(root):
-    if not root:
-        return
-    
-    queue = deque([(root, 0)])  # store (node, level)
-    current_level = 0
-    current_line = []
-    
-    while queue:
-        node, level = queue.popleft()
-        
-        # When level changes, print nodes collected so far
-        if level > current_level:
-            print(" ".join(map(str, current_line)))
-            current_line = []
-            current_level = level
-        
-        current_line.append(node.val)
-        
-        # Add child nodes
-        if node.left:
-            queue.append((node.left, level + 1))
-        if node.right:
-            queue.append((node.right, level + 1))
-    
-    # Print last level
-    if current_line:
-        print(" ".join(map(str, current_line)))
+   if not root:
+       return
+   
+   queue = deque([root])        # Initialize queue with root node
+   
+   while queue:
+       level_size = len(queue)  # Get number of nodes at current level
+       level_nodes = []         # List to store nodes at current level
+       
+       # Process all nodes at current level
+       for _ in range(level_size):
+           node = queue.popleft()  # Get node from front of queue
+           level_nodes.append(str(node.val))
+           
+           # Add child nodes to queue
+           if node.left:
+               queue.append(node.left)
+           if node.right:
+               queue.append(node.right)
+       
+       # Print all nodes at current level
+       print(" ".join(level_nodes))
 ```
 
 ### Solution Explanation
@@ -63,10 +58,4 @@ def print_tree_levels(root):
 - O(N): Visit each node once
 
 ### Space Complexity
-- O(W): W is the maximum width of the tree (max nodes in queue)
-
-This problem tests understanding of:
-1. BFS implementation
-2. Level-order traversal
-3. Queue data structure usage
-4. Output formatting
+- O(W): W is the maximum width of the tree (max nodes in a queue)
