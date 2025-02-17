@@ -42,7 +42,7 @@ SELECT
   ROUND((total_opening / (total_sending + total_opening)) * 100, 2) AS open_perc
 FROM data;
 
--- 2025년 2월 17일 missing FROM-clause entry for table "activities" (이전 쿼리와 동일한 결과, 그런데 에러 발생, 나중에 검토하기)
+-- 2025년 2월 17일: 테이블은 조회 가능하나 제출 시 "missing FROM-clause entry for table activities" 에러 발생. 시스템 이슈로 추정됨
 with data as (
   select
     B.age_bucket,
