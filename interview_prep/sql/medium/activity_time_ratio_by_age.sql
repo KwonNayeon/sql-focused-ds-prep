@@ -41,3 +41,20 @@ SELECT
   ROUND((total_sending / (total_sending + total_opening)) * 100, 2) AS send_perc,
   ROUND((total_opening / (total_sending + total_opening)) * 100, 2) AS open_perc
 FROM data;
+
+-- 2025년 2월 17일 missing FROM-clause entry for table "activities" (이전 쿼리와 동일, 그런데 에러 발생, 나중에 검토하기)
+with data as (
+  select
+    B.age_bucket,
+    sum(case when activity_type = 'open' then time_spent else 0 end) as total_opening,
+    sum(case when activity_type = 'send' then time_spent else 0 end) as total_sending
+  from activities A
+  left join age_breakdown B on A.user_id = B.user_id
+  group by B.age_bucket
+)
+select
+  age_bucket,
+  round((total_sending / (total_sending + total_opening)) * 100, 2) as send_perc,
+  round((total_opening / (total_sending + total_opening)) * 100, 2) as open_perc
+from data
+;
