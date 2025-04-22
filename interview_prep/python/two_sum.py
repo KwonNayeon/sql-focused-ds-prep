@@ -34,3 +34,28 @@ class Solution:
 
             else:
                 seen[num] = i
+
+# dict example 1
+
+nums = [2, 5, 1, 2, 3, 5, 2]
+
+seen = {}
+
+for num in nums:
+  if num in seen:
+    print(f"가장 먼저 등장한 중복 숫자: {num}")
+    break
+  else:
+    seen[num] = True
+
+# dict example 2
+
+s = "abracadabra"
+count = {}
+
+for c in s:
+    count[c] = count.get(c, 0) + 1
+
+# 가장 많이 나온 문자 찾기
+most_common = max(count, key=count.get)
+print(f"가장 많이 나온 문자: '{most_common}' (횟수: {count[most_common]})")
