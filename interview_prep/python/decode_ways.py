@@ -26,6 +26,19 @@ Edge Cases:
 - Starts with '0': invalid, return 0
 - Empty string: return 0
 - s = "10" → only one valid way ("J")
+
+Additional Notes:
+One-digit decoding:
+If the current character (i.e., s[i-1]) is between '1' and '9',
+it can be decoded as a valid letter (e.g., '1' → 'A', '2' → 'B', ..., '9' → 'I').
+So we add dp[i-1] to dp[i] because any valid decoding up to the previous character
+can be extended by decoding this one digit.
+
+Two-digit decoding:
+If the two-character substring (i.e., s[i-2:i]) is between '10' and '26',
+it can be decoded as a valid letter (e.g., '10' → 'J', ..., '26' → 'Z').
+So we add dp[i-2] to dp[i] because any valid decoding up to two characters before
+can be extended by decoding this two-digit number as one letter.
 """
 
 class Solution:
