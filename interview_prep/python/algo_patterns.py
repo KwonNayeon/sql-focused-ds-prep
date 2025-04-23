@@ -1,4 +1,4 @@
-# Python Coding Patterns
+# Python Coding Patterns Part 1
 
 # 1. Two Sum (Hash Map)
 def two_sum(nums: list[int], target: int) -> list[int]:
