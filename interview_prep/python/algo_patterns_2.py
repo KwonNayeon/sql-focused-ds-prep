@@ -14,6 +14,7 @@ def max_subarray_sum(nums: list[int], k: int) -> int:
     return max_sum
 
 # 2. Prefix Sum (e.g., Range Sum Query)
+# 일단 패스
 def range_sum(nums: list[int], start: int, end: int) -> int:
     """
     Calculate the sum of elements between indices start and end inclusive.
@@ -36,6 +37,7 @@ def is_anagram(s: str, t: str) -> bool:
     return Counter(s) == Counter(t)
 
 # 4. Character Frequency Map (e.g., Longest Repeating Character Replacement)
+# 일단 패스
 def longest_repeating_character_replacement(s: str, k: int) -> int:
     """
     Find the length of the longest substring containing the same letter after
@@ -64,6 +66,7 @@ def longest_repeating_character_replacement(s: str, k: int) -> int:
     return max_length
 
 # 5. Valid Parentheses (e.g., LeetCode 20 - Stack)
+# 일단 패스
 def is_valid(s: str) -> bool:
     """
     Determine if the input string has valid parentheses.
@@ -91,6 +94,7 @@ def contains_duplicate(nums: list[int]) -> bool:
     return len(nums) != len(set(nums))
 
 # 7. Linked List Cycle (e.g., LeetCode 141 - Fast and Slow Pointers)
+# 이건 봐야함...
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -110,21 +114,11 @@ def has_cycle(head: ListNode) -> bool:
             return True
     return False
 
-# 8. Reverse Array (e.g., In-place Reverse - Two-pointer)
-def reverse_array(arr: list[int]) -> list[int]:
-    """
-    Reverse an array in-place using two pointers.
-    Time Complexity: O(n) where n is the length of the array
-    Space Complexity: O(1) as it's done in-place
-    """
-    left, right = 0, len(arr) - 1
-    while left < right:
-        arr[left], arr[right] = arr[right], arr[left]
-        left += 1
-        right -= 1
-    return arr
-
-# 9. Can Construct (e.g., Ransom Note - LeetCode 383)
+# 8. Can Construct (e.g., Ransom Note - LeetCode 383)
+# Example 2
+# Counter(ransomNote) = Counter({'a': 2})
+# Counter(magazine) = Counter({'a': 1, 'b': 1})
+# Counter(ransomNote) - Counter(magazine) = Counter({'a': 1})   # 'b'는 ransomNote에는 없기 때문에, 결과에 아예 안 나옴.
 def can_construct(ransomNote: str, magazine: str) -> bool:
     """
     Determine if ransomNote can be constructed from magazine.

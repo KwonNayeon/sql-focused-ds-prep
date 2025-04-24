@@ -31,6 +31,20 @@ def reverse_string(s: str) -> str:
         right -= 1
     return ''.join(s)   # 문자 리스트 -> 다시 문자열로
 
+# Reverse Array (e.g., In-place Reverse - Two-pointer)
+def reverse_array(arr: list[int]) -> list[int]:
+    """
+    Reverse an array in-place using two pointers.
+    Time Complexity: O(n) where n is the length of the array
+    Space Complexity: O(1) as it's done in-place
+    """
+    left, right = 0, len(arr) - 1
+    while left < right:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+    return arr
+
 # 3. Palindrome Check - e.g., LeetCode 125: Valid Palindrome
 def is_palindrome(s: str) -> bool:
     """
