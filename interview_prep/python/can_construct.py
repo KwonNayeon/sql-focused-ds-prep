@@ -16,6 +16,25 @@ def can_construct(ransomNote: str, magazine: str) -> bool:
     from collections import Counter
     return not (Counter(ransomNote) - Counter(magazine))
 
+# Solution 2
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        # 1. magazine의 각 글자 개수 세기
+        char_count = {}
+        for char in magazine:
+            if char in char_count:
+                char_count[char] += 1
+            else:
+                char_count[char] = 1
+
+        # 2. ransomNote의 각 글자가 magazine에 충분히 있는지 확인
+        for char in ransomNote:
+            # magazine에 글자가 아예 없거나, magazine에 있긴 하지만 이미 다 써서 더 이상 남아있지 않은 경우
+            if char not in char_count or char_count[char] == 0:
+                return False
+            char_count[char] -= 1
+
+        return True
 
 """
 리스트(List)와 딕셔너리(Dictionary) 접근 방식 차이, 그리고 defaultdict 사용법
@@ -54,22 +73,3 @@ def can_construct(ransomNote: str, magazine: str) -> bool:
     print(group['fruits']) # ['apple']
 """
 
-# Solution 2
-class Solution:
-    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        # 1. magazine의 각 글자 개수 세기
-        char_count = {}
-        for char in magazine:
-            if char in char_count:
-                char_count[char] += 1
-            else:
-                char_count[char] = 1
-
-        # 2. ransomNote의 각 글자가 magazine에 충분히 있는지 확인
-        for char in ransomNote:
-            # magazine에 글자가 아예 없거나, magazine에 있긴 하지만 이미 다 써서 더 이상 남아있지 않은 경우
-            if char not in char_count or char_count[char] == 0:
-                return False
-            char_count[char] -= 1
-
-        return True

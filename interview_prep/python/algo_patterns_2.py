@@ -14,7 +14,6 @@ def max_subarray_sum(nums: list[int], k: int) -> int:
     return max_sum
 
 # 2. Prefix Sum (e.g., Range Sum Query)
-# 일단 패스
 def range_sum(nums: list[int], start: int, end: int) -> int:
     """
     Calculate the sum of elements between indices start and end inclusive.
@@ -36,8 +35,7 @@ def is_anagram(s: str, t: str) -> bool:
     from collections import Counter
     return Counter(s) == Counter(t)
 
-# 4. Character Frequency Map (e.g., Longest Repeating Character Replacement)
-# 일단 패스
+# ✅ 4. Character Frequency Map (e.g., Longest Repeating Character Replacement)
 def longest_repeating_character_replacement(s: str, k: int) -> int:
     """
     Find the length of the longest substring containing the same letter after
@@ -65,8 +63,7 @@ def longest_repeating_character_replacement(s: str, k: int) -> int:
     
     return max_length
 
-# 5. Valid Parentheses (e.g., LeetCode 20 - Stack)
-# 일단 패스
+# ⭐️ 5. Valid Parentheses (e.g., LeetCode 20 Valid Parentheses)
 def is_valid(s: str) -> bool:
     """
     Determine if the input string has valid parentheses.
@@ -94,11 +91,10 @@ def contains_duplicate(nums: list[int]) -> bool:
     return len(nums) != len(set(nums))
 
 # 7. Linked List Cycle (e.g., LeetCode 141 - Fast and Slow Pointers)
-# 이건 봐야함...
 class ListNode:
     def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+        self.val = val      # 내 값
+        self.next = next    # 내가 가리키는 다음 노드
 
 def has_cycle(head: ListNode) -> bool:
     """
