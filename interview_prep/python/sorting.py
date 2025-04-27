@@ -1,4 +1,10 @@
 # Sorting
+"""
+버블 정렬: 인접한 원소들을 비교하고 교환하며 큰 값을 맨 뒤로 이동
+삽입 정렬: 정렬된 부분에 원소를 하나씩 적절한 위치에 삽입
+퀵 정렬: 피벗을 기준으로 배열을 분할하여 재귀적으로 정렬 (분할 정복)
+합병 정렬: 배열을 절반으로 나누어 재귀적으로 정렬한 후 병합 (분할 정복)
+"""
 
 """
 BUBBLE SORT
@@ -13,6 +19,17 @@ BUBBLE SORT
 # 4. Simple to implement but inefficient for large datasets
 # 5. Stable sort - maintains relative order of equal elements
 """
+# Solution 1
+def bubble_sort(arr):
+    arr_len = len(arr) - 1
+    for i in range(arr_len):
+        for j in range(arr_len):
+            # Compare adjacent elements and swap if they're in the wrong order
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+# Solution 2: 최적화 버전
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -24,6 +41,34 @@ def bubble_sort(arr):
             # Compare adjacent elements and swap if they're in the wrong order
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+
+# ✅ Insertion sort
+def insertion_sort(arr):
+    """
+    Insertion Sort (평균 및 최악 O(n^2), 최선 O(n))
+    - 정렬된 부분에 새 원소를 적절한 위치에 삽입
+    - 작은 데이터셋에 효율적, 거의 정렬된 데이터에 유리
+    """
+    for i in range(1, len(arr)):  # 첫 원소는 이미 정렬됐다고 가정하고 두 번째부터 시작
+        key = arr[i]  # 현재 삽입할 원소 (정렬되지 않은 부분의 첫 원소)
+        j = i - 1     # 정렬된 부분의 마지막 인덱스
+        
+        # key보다 큰 원소들을 오른쪽으로 이동
+        # 이 while 루프는 두 가지 조건으로 종료됨:
+        # 1) j < 0 (배열 시작 이전에 도달)
+        # 2) arr[j] <= key (key보다 작거나 같은 원소 발견)
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]  # 현재 원소를 한 칸 오른쪽으로 이동
+            j -= 1  # 왼쪽으로 이동하여 계속 비교
+        
+        # 적절한 위치에 key 삽입
+        # j+1이 "적절한 위치"가 되는 이유:
+        # - 루프가 j < 0으로 끝났다면: j+1 = 0 (배열의 맨 앞)
+        # - 루프가 arr[j] <= key로 끝났다면: j+1은 key가 들어갈 위치
+        arr[j + 1] = key  # 이 위치는 루프 종료 방식에 따라 달라짐
+    
     return arr
 
 
@@ -106,11 +151,17 @@ def merge_sort(arr):
     """
     if len(arr) <= 1:
         return arr
-    mid = len(arr)//2
+    
+    mid = len(arr)//2   # quotient
+    
+    # 재귀적으로 분할 및 정렬
     left = merge_sort(arr[:mid])
     right = merge_sort(arr[mid:])
+    
+    # 병합 과정
     result = []
     i = j = 0
+    
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             result.append(left[i])
@@ -118,6 +169,46 @@ def merge_sort(arr):
         else:
             result.append(right[j])
             j += 1
-    result += left[i:]
-    result += right[j:]
+            
+    result += left[i:]   # left 배열에 남은 원소들 모두 추가
+    result += right[j:]  # right 배열에 남은 원소들 모두 추가
+    
     return result
+
+# 주석으로 스텝을 나눈 버전
+def merge_sort(arr):
+    """
+    Merge Sort (always O(n log n), stable sort)
+    - Recursively divide the list in half and merge sorted halves
+    """
+    # Step 1: Base case - a list with 0 or 1 element is already sorted
+    if len(arr) <= 1:
+        return arr
+    
+    # Step 2: Divide - find the middle point to divide the array
+    mid = len(arr)//2   # quotient
+    
+    # Step 3: Conquer - recursively sort both halves
+    left = merge_sort(arr[:mid])    # Sort left half
+    right = merge_sort(arr[mid:])   # Sort right half
+    
+    # Step 4: Merge - combine the sorted halves
+    result = []
+    i = j = 0   # Pointers for left and right arrays
+    
+    # Step 5: Compare elements from both arrays and merge in sorted order
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])  # Add smaller element from left array
+            i += 1
+        else:
+            result.append(right[j])  # Add smaller element from right array
+            j += 1
+    
+    # Step 6: Add remaining elements (if any)
+    result += left[i:]   # Add any remaining elements from left array
+    result += right[j:]  # Add any remaining elements from right array
+    
+    # Step 7: Return the merged sorted array
+    return result
+
