@@ -104,8 +104,17 @@ def quick_sort(arr):
 # solution 2: 내가 이해하기 쉬운 버전
 def quick_sort(arr):
     """
-    Quick Sort (Divide and Conquer, 평균 O(n log n), 최악 O(n^2))
+    Quick Sor (Divide and Conquer, 평균 O(n log n), 최악 O(n^2))
     - 리스트를 피벗 기준으로 좌/우로 나눠 재귀적으로 정렬
+      - 큰 문제(전체 배열)를 작은 문제(좌, 우 부분 배열)로 나눠서(divide) 해결하고,
+      - 최종적으로 합쳐서(conquer) 정렬을 완성하는 구조
+    - Time complexity:
+      - 평균적으로는 매 단계 O(n) * 단계 수 O(log n) = O(n log n)
+      - Its average time complexity is O(n log n)
+      - because each partition takes O(n) time over log n recursive levels.
+    - Space Complexity:
+      - Quick Sort is in-place and uses O(log n) space on average for the recursion stack,
+      - while Merge Sort needs O(n) extra space for merging.
     """
     # 기저 조건: 배열 길이가 1 이하면 이미 정렬된 상태
     if len(arr) <= 1:
