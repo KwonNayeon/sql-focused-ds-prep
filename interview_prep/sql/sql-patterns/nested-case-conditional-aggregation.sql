@@ -1,3 +1,4 @@
+-- LeetCode 1934. Confirmation Rate
 -- 외부 CASE문 (첫 번째)
 case when count(c.action) = 0 then 0
      else 
