@@ -63,6 +63,6 @@ SELECT
     CONCAT(first_name, ' ', last_name) as full_name_concat  -- MySQL/PostgreSQL
 FROM users;
 
--- 💡 핵심: NULL은 "알 수 없는 값"이므로 모든 비교 결과가 NULL
--- 💡 집계 함수는 대부분 NULL을 자동으로 제외
--- 💡 COALESCE는 첫 번째 non-NULL 값 반환
+-- 핵심: NULL은 "알 수 없는 값"이므로 모든 비교 결과가 NULL
+-- 집계 함수는 대부분 NULL을 자동으로 제외
+-- COALESCE는 첫 번째 non-NULL 값 반환

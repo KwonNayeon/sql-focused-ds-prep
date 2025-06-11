@@ -131,6 +131,6 @@ final_analysis AS (
 )
 SELECT * FROM final_analysis ORDER BY month;
 
--- 💡 핵심: 복잡한 로직을 단계별로 나누어 이해하기 쉽게
--- 💡 CTE는 쿼리 내에서만 유효 (VIEW와 다름)
--- 💡 재귀 CTE는 계층형 데이터 처리에 강력함
+-- 핵심: 복잡한 로직을 단계별로 나누어 이해하기 쉽게
+-- CTE는 쿼리 내에서만 유효 (VIEW와 다름)
+-- 재귀 CTE는 계층형 데이터 처리에 강력함

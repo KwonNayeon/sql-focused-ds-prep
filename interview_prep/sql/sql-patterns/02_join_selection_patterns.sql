@@ -35,7 +35,7 @@ FROM signups s
 LEFT JOIN confirmations c ON s.user_id = c.user_id  -- 가입만 하고 확인 안한 사람도 포함
 GROUP BY s.user_id;
 
--- 💡 판단 기준:
+-- 판단 기준:
 -- LEFT JOIN: 왼쪽 테이블의 모든 레코드 보존 필요
 -- INNER JOIN: 매칭되는 데이터만 필요
--- 💡 집계할 때는 특히 JOIN 타입이 결과를 크게 바꿈!
+-- 집계할 때는 특히 JOIN 타입이 결과를 크게 바꿈!

@@ -3,12 +3,13 @@ A personal error log and solution repository for technical interview preparation
 
 ## About
 - **Purpose:** Documenting solutions, debugging processes, and lessons learned during interview preparation
-- **Focus Areas:** SQL, Python, Statistics, and Machine Learning
+- **Focus Areas:** SQL, Algorithm, Pandas, Statistics, and Machine Learning
 - **SQL Engine:** PostgreSQL 14
 
 ## Problem Categories
-- **sql:** SQL-focused questions and query troubleshooting (primary focus)
-- **python:** Python coding challenges and scripts
+- **sql:** SQL query optimization and problem-solving (primary focus)
+- **algorithm:** Algorithm and data structure problems  
+- **pandas:** Data preprocessing and manipulation
 - **statistics:** Statistical concepts and problem-solving
 - **ml:** Machine learning techniques and applied concepts
 
@@ -20,13 +21,12 @@ A personal error log and solution repository for technical interview preparation
 │   │   ├── unfinished_parts.sql
 │   │   └── ...
 │   ├── medium/
-│   └── hard/
-├── python/
-│   └── factorial_formula.py     # Python coding challenges
-├── statistics/
-│   └── notes.md        # Statistical concepts and problem-solving steps
-└── ml/
-    └── notes.md        # Insights on machine learning tasks
+│   ├── hard/
+│   └── sql-patterns/
+├── algorithm/          # Algorithm and data structure problems
+├── pandas/             # Data preprocessing and manipulation
+├── statistics/         # Statistical concepts and problem-solving
+└── ml/                 # Machine learning techniques and applied concepts
 ```
 
 ## Notes
@@ -38,7 +38,8 @@ A personal error log and solution repository for technical interview preparation
 - Emphasis is placed on SQL due to its relevance in technical interviews, but other areas are included for comprehensive preparation
 
 ## Resources
-- [PostgreSQL 14 Documentation](https://www.postgresql.org/docs/14/index.html)
-- [Python Official Documentation](https://docs.python.org/3/)
 - [DataLemur SQL Questions](https://datalemur.com/questions)
-- ["Ace the Data Science Interview" Official Site](https://www.acethedatascienceinterview.com)
+- [PostgreSQL 14 Documentation](https://www.postgresql.org/docs/14/index.html)
+- [Ace the Data Science Interview](https://www.acethedatascienceinterview.com)
+- [Pandas Exercises](https://github.com/guipsamora/pandas_exercises)
+- [Python Documentation](https://docs.python.org/3/)

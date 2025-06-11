@@ -44,5 +44,5 @@ SELECT
 FROM customers
 GROUP BY region;
 
--- 💡 핵심: CASE문으로 조건을 필터링하여 여러 지표를 한 번에 계산
--- 💡 COUNT vs SUM: COUNT는 NULL 무시, SUM은 0 포함
+-- 핵심: CASE문으로 조건을 필터링하여 여러 지표를 한 번에 계산
+-- COUNT vs SUM: COUNT는 NULL 무시, SUM은 0 포함

@@ -1,16 +1,16 @@
 # SQL Practice Repository
-Personal repository for SQL problem solving practice and technical interview preparation, primarily focused on data science SQL challenges 🎯
+Personal repository for SQL problem solving practice and technical interview preparation, primarily focused on data science SQL challenges
 
 ## About
 This repository contains my solutions and notes for various SQL challenges and interview preparation materials. While SQL is the primary focus, it also includes other technical interview topics for data science positions.
 
 ## Current Challenge
-🎯 **Technical Interview Preparation**
+**Technical Interview Preparation**
 - Primary Focus: SQL problems from DataLemur (PostgreSQL 14)
 - Additional Areas: Python, Statistics, ML concepts
 - Based on: "Ace the Data Science Interview"
 
-✨ **Recently Completed**
+**Recently Completed**
 - Advent of SQL 2024: All 25 days solved! 
 - Platform: SQLite
 - Link: [Advent of SQL 2024](https://solvesql.com/collections/advent-of-sql-2024/)

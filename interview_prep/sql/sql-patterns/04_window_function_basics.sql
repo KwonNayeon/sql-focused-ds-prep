@@ -45,6 +45,6 @@ SELECT
     ) as total_share_percent
 FROM product_sales;
 
--- 💡 핵심: PARTITION BY로 그룹 나누고, ORDER BY로 정렬 기준 설정
--- 💡 ROWS/RANGE로 윈도우 범위 조정 가능
--- 💡 일반 집계와 달리 원본 행 수 유지!
+-- 핵심: PARTITION BY로 그룹 나누고, ORDER BY로 정렬 기준 설정
+-- ROWS/RANGE로 윈도우 범위 조정 가능
+-- 일반 집계와 달리 원본 행 수 유지!
