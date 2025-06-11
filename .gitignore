@@ -1,0 +1,16 @@
+# SSL config
+ssl_config.py
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+*.csv
+*.xlsx
+
+# OS
+.DS_Store
