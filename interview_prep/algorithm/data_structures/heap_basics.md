@@ -34,7 +34,7 @@ print(heappop(heap))  # 1
 print(heap)           # [3, 4, 5, 7, 8]
 ```
 
-## 3. 최솟값 조회 (삭제하지 않고)
+## 3. 삭제하지 않고 최솟값 조회
 ```python
 # 최솟값 읽기
 print(heap[0])  # 3
