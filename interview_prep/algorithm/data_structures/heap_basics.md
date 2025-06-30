@@ -1,7 +1,6 @@
 # Python Heap 정리 가이드
 
-> **Study Source**
-> Original Material: [파이썬의 heapq 모듈로 힙 자료구조 사용하기](https://www.daleseo.com/python-heapq/)  
+> **Study Source**: [파이썬의 heapq 모듈로 힙 자료구조 사용하기](https://www.daleseo.com/python-heapq/)  
 
 ## 모듈 임포트
 ```python
