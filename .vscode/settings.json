@@ -1,6 +1,0 @@
-{
-    "github.copilot.editor.enableCodeActions": false,
-    "github.copilot.enable": {
-        "*": false
-    }
-}
