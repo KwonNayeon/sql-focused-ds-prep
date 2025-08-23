@@ -16,3 +16,6 @@ __pycache__/
 .DS_Store
 
 .vscode/
+
+# Personal study guides
+**/1_guide.md
