@@ -64,5 +64,3 @@ def bfs(graph, start):
                 visited.add(neighbor)
                 queue.append(neighbor)
     return visited
-
-
