@@ -1,5 +1,12 @@
 # BFS 격자 탐색 문제
 
+## 관련 문제 (난이도순)
+
+1. **게임 맵 최단거리** (프로그래머스) - 기본 BFS 격자 탐색
+2. **Number of Islands** (LeetCode) - 섬의 개수, visited 배열 활용
+3. **Rotting Oranges** (LeetCode) - 멀티 소스 BFS, 시간 개념
+4. **Pacific Atlantic Water Flow** (LeetCode) - 조건부 탐색, 두 번의 BFS
+
 ## 수도코드
 
 ```
@@ -12,7 +19,7 @@ function BFS(start, target, grid):
     visited[start_row][start_col] = True
 
     while queue is not empty:
-        r, c, d = queue.pop_front()    # 현재 위치와 거리
+        r, c, d = queue.popleft()    # 현재 위치와 거리
 
         if (r, c) == (target_row, target_col):
             return d    # 최단 거리 반환
@@ -26,11 +33,10 @@ function BFS(start, target, grid):
                visited[nr][nc] == False 이면:
 
                 visited[nr][nc] = True
-                queue.push_back((nr, nc, d+1))
+                queue.append((nr, nc, d+1))
 
     return -1   # 도착 불가
 ```
-
 
 ## 설명
 
@@ -66,7 +72,6 @@ function BFS(start, target, grid):
 
    * 큐 다 비우고도 도착 못 하면 길 없음
 
-
 ## 기억할 것
 
 * 시작 거리: **칸 수 기준**이면 `1`, **이동 횟수 기준**이면 `0`
@@ -75,61 +80,25 @@ function BFS(start, target, grid):
 * 조건 체크 순서: **범위 → 통로 → 미방문**
 * "꺼내고 -> 검사하고 -> 조건에 맞으면 넣고"를 반복
 
+## BFS 명칭 정리
 
-## 관련 문제
-프로그래머스 - 게임 맵 최단거리 문제
+| Python deque | Python list | 설명 |
+|-------------|-------------|------|
+| `queue.popleft()` | `queue.pop(0)` | 맨 앞에서 빼기 |
+| `queue.append()` | `queue.append()` | 맨 뒤에 넣기 |
 
+## 2차원 배열 생성
+
+```python
+visited = [[False] * m for _ in range(n)]
+# n = 행(세로) 개수, m = 열(가로) 개수
+# visited[행][열] 로 접근
 ```
-from collections import deque
 
-def in_range(r, c, n, m):
-    return 0 <= r < n and 0 <= c < m
+## 튜플 vs 리스트
 
-def passable(grid, r, c):
-    # 흰 칸(1)만 통과
-    return grid[r][c] == 1
-
-def solution(maps):
-    n, m = len(maps), len(maps[0])
-    
-    # 시작이 막혀있으면 바로 불가능
-    if maps[0][0] == 0 or maps[n-1][m-1] == 0:
-        return -1
-
-    # 방문 배열
-    visited = [[False] * m for _ in range(n)]
-    
-    # queue
-    q = deque()
-    # TODO 1) 시작점 push: (0, 0, 시작거리)
-    q.append((0, 0, 1))
-    # TODO 2) 시작점 방문 표시
-    visited[0][0] = True
-
-    # 방향 벡터 (상/하/좌/우)
-    dirs = [(-1,0), (1,0), (0,-1), (0,1)]
-    
-    # bfs
-    while q:
-        # TODO 3) 현재 위치/거리 꺼내기 (r, c, d)
-        r, c, d = q.popleft()
-
-        # TODO 4) 도착점이면 거리 리턴: (r, c) == (n-1, m-1)
-        if (r, c) == (n-1, m-1):
-            return d
-
-        # 이웃 탐색
-        for dr, dc in dirs:
-            # TODO 5) 새 위치
-            nr, nc = r + dr, c + dc
-
-            # TODO 6) 경계 & 통로 & 미방문 체크
-            # if in_range(nr, nc, n, m) and passable(maps, nr, nc) and not visited[nr][nc]:
-            #     TODO 7) 방문 표시 & 큐에 (nr, nc, d+1)
-            if in_range(nr, nc, n, m) and passable(maps, nr, nc) and not visited[nr][nc]:
-                visited[nr][nc] = True
-                q.append((nr, nc, d + 1))
-
-    # 도달 불가
-    return -1
+```python
+q.append((0, 0, 1))      # 튜플 - 변경불가, 좌표+값 묶을 때
+q.append([0, 0, 1])      # 리스트 - 변경가능
+r, c, d = q.popleft()    # 튜플 언패킹
 ```
