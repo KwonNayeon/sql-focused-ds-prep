@@ -1,4 +1,4 @@
-# bfs01_test.py - 게임 맵 최단거리 복습용
+# 게임 맵 최단거리 복습
 
 from collections import deque
 

@@ -40,6 +40,11 @@ function BFS(start, target, grid):
                     queue.append((nr, nc, d+1))
 
     return -1   # 도착 불가
+
+시간 복잡도:
+
+공간 복잡도:
+
 '''
 from collections import deque
 

@@ -21,6 +21,11 @@ for 각 칸 (r, c):
     if grid[r][c] == 1 and not visited[r][c]:
         num_of_island += 1
         BFS_또는_DFS로_연결된_모든_1들을_방문처리()
+
+시간 복잡도:
+
+공간 복잡도:
+
 '''
 from collections import deque
 class Solution:
