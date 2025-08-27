@@ -45,7 +45,7 @@ class Solution:
         board = [["." for _ in range(n)] for _ in range(n)]
 
         def is_safe(row, col):
-            # 같은 열
+            # 같은 열에 퀸이 있는지
             for i in range(row):
                 if board[i][col] == "Q":
                     return False
