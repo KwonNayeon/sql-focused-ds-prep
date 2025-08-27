@@ -22,10 +22,11 @@ for 각 칸 (r, c):
         num_of_island += 1
         BFS_또는_DFS로_연결된_모든_1들을_방문처리()
 
-시간 복잡도:
+시간 복잡도: O(n×m)
+- 각 셀을 최대 한번 방문하기 때문
 
-공간 복잡도:
-
+공간 복잡도: O(n×m)
+- visited 배열에 각 셀의 방문여부를 기록
 '''
 from collections import deque
 class Solution:

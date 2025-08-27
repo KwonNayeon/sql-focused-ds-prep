@@ -3,8 +3,8 @@
 ## 관련 문제
 
 1. **Number of Islands** (LeetCode) - DFS/백트래킹 기초
-2. **N-Queens** (LeetCode) - 전형적인 백트래킹
-3. **Combination Sum** (LeetCode) - 조합 생성 백트래킹
+2. **Combination Sum** (LeetCode) - 조합 생성 백트래킹
+3. **N-Queens** (LeetCode) - 전형적인 백트래킹
 
 ## 수도코드
 

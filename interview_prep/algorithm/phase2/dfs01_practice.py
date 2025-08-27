@@ -14,6 +14,12 @@ LeetCode - Number of Islands
 
 BFS/DFS를 사용하는 이유:
 - 한 섬을 발견하면 그 섬의 모든 연결된 1들을 방문처리 하기 위함
+
+시간 복잡도: O(n×m)
+- 각 셀을 최대 한번 방문하기 때문
+
+공간 복잡도: O(n×m)
+- visited 배열 + 재귀 호출 스택
 '''
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
