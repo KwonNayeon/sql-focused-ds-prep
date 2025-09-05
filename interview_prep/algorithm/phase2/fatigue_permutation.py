@@ -37,21 +37,27 @@
 - 모든 순열을 메모리에 생성함
 '''
 from itertools import permutations
+
 def solution(k, dungeons):
-    
     max_d = 0
-    
+
     for perm in permutations(dungeons):
         cur_k = k
         cur_d = 0
-        
+
         for i, j in perm:
             if cur_k >= i:
                 cur_k -= j
                 cur_d += 1
             else:
                 break
-                
+            
         max_d = max(max_d, cur_d)
-    
+
     return max_d
+
+
+
+# 테스트
+print(solution(80, [[80,20],[50,40],[30,10]]))  # 3
+print(solution(10, [[80,20],[50,40],[30,10]]))  # 0
