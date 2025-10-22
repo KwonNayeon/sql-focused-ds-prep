@@ -3,8 +3,20 @@
 # 1. Palindrome Check - 리뷰에서 나온 문제
 def is_palindrome(s):
     """Check if a string is a palindrome (ignores case and spaces)"""
-    clean = ''.join(c.lower() for c in s if c.isalnum())
-    return clean == clean[::-1]
+    left = 0
+    right = len(s) - 1
+    
+    while left < right:
+        while left < right and not s[left].isalnum():
+            left += 1
+        while left < right and not s[right].isalnum():
+            right -= 1
+        if s[left].lower() != s[right].lower():
+            return False
+        left += 1
+        right -= 1
+    
+    return True
 
 # 2. Two Sum - 가장 기본적인 문제
 def two_sum(nums, target):
@@ -108,13 +120,3 @@ def merge_sorted_lists(l1, l2):
 # 2. 브루트포스 먼저, 최적화는 나중에
 # 3. Edge case 간단하게 처리
 # 4. 테스트 케이스로 검증
-
-# 예시 테스트:
-if __name__ == "__main__":
-    # 간단한 테스트 케이스들
-    print(is_palindrome("A man a plan a canal Panama"))  # True
-    print(two_sum([2, 7, 11, 15], 9))  # [0, 1]
-    print(reverse_string("hello"))  # "olleh"
-    print(is_anagram("listen", "silent"))  # True
-    print(find_missing_number([1, 2, 4, 5]))  # 3
-    print(move_zeros([0, 1, 0, 3, 12]))  # [1, 3, 12, 0, 0]
