@@ -18,3 +18,7 @@ result = df[df['rn'] == 1]
 
 # 필요한 컬럼만 선택
 result = result.drop(columns=['rn'])
+
+# Review Notes:
+# 2025-11-04: 처음 풂
+# 2025-11-05: 문법은 여전히 헷갈림
