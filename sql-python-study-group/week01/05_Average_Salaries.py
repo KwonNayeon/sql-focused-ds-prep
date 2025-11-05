@@ -1,11 +1,7 @@
 # Import your libraries
 import pandas as pd
 
-# Start writing code
-employee.head()
-
 df = employee
-df.head()
 
 # dpt별로 group by -> 각 dpt별 avg를 나타내는 칼럼 생성
 # transform으로 원본 df 길이에 맞춰 반환
