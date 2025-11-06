@@ -8,4 +8,4 @@ left join orders o on c.id = o.cust_id
 order by first_name, order_details asc
 
 -- Review Notes:
--- 2025-11-05: 처음 풂, 비교적 쉬운 문제
+-- 2025-11-06: 비교적 쉬웠음

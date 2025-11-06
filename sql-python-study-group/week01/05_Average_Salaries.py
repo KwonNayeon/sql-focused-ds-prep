@@ -15,4 +15,5 @@ result
 '''
 Review Notes:
 2025-11-05: transform 함수 배움
+2025-11-06: 복습 완료
 '''
