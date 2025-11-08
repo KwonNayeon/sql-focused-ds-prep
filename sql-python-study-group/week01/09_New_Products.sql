@@ -14,5 +14,14 @@ from data
 group by company_name
 ;
 
+select
+    company_name,
+    sum(case when year = '2020' then 1 else 0 end) -
+    sum(case when year = '2019' then 1 else 0 end) as net_products
+from car_launches
+group by company_name
+;
+
 -- Review Notes:
 -- 2025-11-07: 다시 풀어보기
+-- 2025-11-08: CTE 없이 풂

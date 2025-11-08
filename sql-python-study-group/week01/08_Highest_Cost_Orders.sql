@@ -29,3 +29,4 @@ where rn = 1
 
 -- Review Notes:
 -- 2025-11-07: partition by order_date 해야 날짜별 최고액을 구할 수 있음, 꼭 다시 풀어보기
+-- 2025-11-08: CTE 이름 더 명확하게 쓰는 연습하기
