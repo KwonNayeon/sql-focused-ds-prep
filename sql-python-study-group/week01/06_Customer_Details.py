@@ -24,4 +24,5 @@ result = sorted[['first_name', 'last_name', 'city', 'order_details']]
 '''
 Review Notes:
 2025-11-06: merge할 때 쓰이는 여러가지 옵션들 배움
+2025-11-10: 마지막에 정렬하는 것 잊지 말기
 '''

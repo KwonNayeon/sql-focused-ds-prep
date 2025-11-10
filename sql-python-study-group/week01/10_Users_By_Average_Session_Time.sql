@@ -18,3 +18,4 @@ group by user_id
 
 -- Review Notes:
 -- 2025-11-08: 다시 풀어보기
+-- 2025-11-10: case문 쓸 때 문법 여전히 헷갈림
