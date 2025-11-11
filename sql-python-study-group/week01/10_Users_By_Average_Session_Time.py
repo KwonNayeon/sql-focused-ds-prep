@@ -24,4 +24,5 @@ result = (merged.groupby('user_id')['session_time'].mean().reset_index().rename(
 '''
 Review Notes:
 2025-11-10: 내일 다시 풀어보자
+2025-11-11: 어제보단 문법에 익숙해졌는데, 여전히 헷갈림
 '''
