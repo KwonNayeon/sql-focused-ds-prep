@@ -8,8 +8,9 @@ def calculate_covariance_matrix(vectors: list[list[float]]) -> list[list[float]]
     # Pre-calculate means
     means = [sum(feature)/n_obs for feature in vectors]
     # Populate the return matrix
+    # 상삼각행렬만 계산 (i <= j인 경우만)
     for i in range(n_features):
-        for j in range(n_features):
+        for j in range(i, n_features):
             cov = sum(((vectors[i][k] - means[i])*(vectors[j][k] - means[j])) for k in range(n_obs))/(n_obs-1)
             cov_matrix[i][j] = cov
             cov_matrix[j][i] = cov
