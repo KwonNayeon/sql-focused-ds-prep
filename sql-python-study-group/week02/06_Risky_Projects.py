@@ -27,3 +27,4 @@ result = filtered[['title', 'budget', 'prorated_expense']]
 
 # Review Notes:
 # 2025-11-17: 다시 풀어보기, 중간에 apply(np.ceil) 안 해서 틀렸음
+# 2025-11-18: 어제보단 나아졌는데, 여전히 헷갈림
