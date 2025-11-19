@@ -6,7 +6,7 @@
 
 ## 플랫폼
 
-* StrataScratch: [StrataStrtch](https://www.stratascratch.com/)
+* StrataScratch: [https://www.stratascratch.com/](https://www.stratascratch.com/)
 * Deep-ML: [https://www.deep-ml.com/](https://www.deep-ml.com/)
 
 ## 스터디 진행 방식
