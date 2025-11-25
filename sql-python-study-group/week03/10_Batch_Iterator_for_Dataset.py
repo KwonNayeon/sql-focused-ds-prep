@@ -1,18 +1,18 @@
 import numpy as np
-
-def batch_iterator(X, y=None, batch_size=64):
-	# Your code here
-	result = []
-
+def batch_iterator(X, y=None, batch_size=32):
+    result = []
+    
     for i in range(0, len(X), batch_size):
         X_batch = X[i:i+batch_size]
-
+        
         if y is not None:
             y_batch = y[i:i+batch_size]
             result.append([X_batch.tolist(), y_batch.tolist()])
         else:
             result.append(X_batch.tolist())
+    
     return result
+
 
 '''
 === 코드 동작 설명 ===
@@ -42,7 +42,7 @@ def batch_iterator(X, y=None, batch_size=64):
 
 5. result.append()의 역할:
    - append는 리스트에 요소를 "추가"
-   - 각 배치를 result 리스트에 쌓음
+   - 각 배치를 result 리스트에 차곡차곡 쌓음
    - result = [배치1, 배치2, 배치3, ...]
 
 6. 최종 결과 구조:
