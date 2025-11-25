@@ -48,4 +48,3 @@ def descriptive_statistics(data):
         "interquartile_range": iqr
     }
 	return stats_dict
-
