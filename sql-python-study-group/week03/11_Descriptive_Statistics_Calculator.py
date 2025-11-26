@@ -2,7 +2,7 @@ import numpy as np
 from collections import Counter
 
 def descriptive_statistics(data):
-	# Your code here
+    # Your code here
     sorted_data = sorted(data)
     n = len(data)
 
@@ -36,7 +36,7 @@ def descriptive_statistics(data):
 
     iqr = percentiles[2] - percentiles[0]
 
-	stats_dict = {
+    stats_dict = {
         "mean": mean,
         "median": median,
         "mode": mode,
@@ -47,4 +47,4 @@ def descriptive_statistics(data):
         "75th_percentile": percentiles[2],
         "interquartile_range": iqr
     }
-	return stats_dict
+    return stats_dict
