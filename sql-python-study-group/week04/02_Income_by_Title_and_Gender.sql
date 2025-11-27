@@ -23,3 +23,6 @@ select
     avg(total)
 from total
 group by employee_title, sex
+
+-- Review Notes:
+-- 2025-11-27: 복습 필수
