@@ -25,3 +25,8 @@ result = merged.groupby('date_sent').agg(
 result['percentage_acceptance'] = result['receive_cnt'] / result['send_cnt']
 
 result[['date_sent', 'percentage_acceptance']]
+
+'''
+Review Notes:
+2025-11-28: size, count 활용법 익힘. 다시 풀어보기
+'''
