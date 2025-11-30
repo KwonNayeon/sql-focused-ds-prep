@@ -4,9 +4,8 @@ import pandas as pd
 df = airbnb_search_details
 
 # city, property_type별로 groupby -> bathrooms & bedrooms의 평균 구하기
-df['n_bathrooms_avg'] = df.groupby(['city', 'property_type'])['bathrooms'].transform('mean')
-df['n_bedrooms_avg'] = df.groupby(['city', 'property_type'])['bedrooms'].transform('mean')
-
+df['n_bathrooms_avg'] = df.groupby(['city', 'property_type'])['bathrooms'].mean()
+df['n_bedrooms_avg'] = df.groupby(['city', 'property_type'])['bedrooms'].mean()
 # 중복 제거
 result = df[['city', 'property_type', 'n_bathrooms_avg', 'n_bedrooms_avg']].drop_duplicates()
 

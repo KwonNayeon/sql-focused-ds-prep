@@ -13,4 +13,3 @@ result = df.sort_values(by=['cnt', 'rn'], ascending=[False, True])
 
 # Review Notes:
 # 2025-11-15: 다시 풀어보기, 어려운 문제는 아닌데 엄청 헷갈림
-

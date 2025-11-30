@@ -8,6 +8,8 @@ merged = (ms_user_dimension
         )
 
 # 2. pivot_table로 집계
+# long → wide
+# date를 행(index)으로, paying_customer(0/1)를 열(columns)로, downloads를 값(values)으로 집계(aggfunc='sum')
 pivoted = merged.pivot_table(
     index='date',
     columns='paying_customer',
@@ -16,7 +18,6 @@ pivoted = merged.pivot_table(
     ).reset_index()
     
 # 3. 칼럼명 정리
-pivoted.columns.name = None
 pivoted = pivoted.rename(columns={'no': 'non_paying', 'yes': 'paying'})
 
 # 4. 필터링 및 정렬

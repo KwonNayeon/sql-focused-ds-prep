@@ -1,7 +1,7 @@
 import numpy as np
 
 def linear_regression_normal_equation(X: list[list[float]], y: list[float]) -> list[float]:
-    # Your code here, make sure to round
+    # Python list → 넘파이 array 변환 필수: 행렬 연산 위해
     X = np.array(X)
     y = np.array(y).reshape(-1, 1)
     X_T = X.T
