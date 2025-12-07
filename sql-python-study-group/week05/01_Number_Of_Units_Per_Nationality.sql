@@ -1,5 +1,6 @@
 -- Number Of Units Per Nationality
 -- Apartment만 필터링 해야함
+
 select
     h.nationality,
     count(distinct u.unit_id) as n_unit

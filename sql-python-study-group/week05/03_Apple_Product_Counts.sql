@@ -1,4 +1,5 @@
 -- Apple Product Counts
+
 select
     u.language,
     count(distinct case when device in ('macbook pro', 'iphone 5s', 'ipad air') then e.user_id end) as n_apple_users,

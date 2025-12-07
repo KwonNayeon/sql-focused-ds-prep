@@ -1,7 +1,7 @@
 -- No Order Customers
-
 -- left join으로 모든 customers 조회
 -- between '2019-02-01' and '2019-03-01' 외의 주문은 모두 null로 표시
+
 select
     c.first_name
 from customers c
