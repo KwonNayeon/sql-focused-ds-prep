@@ -9,21 +9,24 @@ merged = playbook_events.merge(playbook_users, on='user_id', how='left')
 # Is apple device?
 apple_devices = ['macbook pro', 'iphone 5s', 'ipad air']
 
+# apple device 사용하는 언어만 있음
 df = (merged[merged['device'].isin(apple_devices)]
         .groupby('language')['user_id']
         .nunique()
         .to_frame('n_apple_users')
     )
-    
+
+# 모든 언어가 다 있음    
 result = (merged.groupby('language')['user_id']
                 .nunique()
                 .rename('n_total_users')
                 .reset_index()
     )
 
-# outer join 해야함 bc apple device를 사용하지 않는 경우도 있으니까
-result = (result.merge(df, how='outer', on='language')
+# result가 df보다 더 큰 집합이기 때문에 left join을 해도 괜찮음
+result = (result.merge(df, how='left', on='language')
                 .fillna(0)
+                .sort_values('n_total_users', ascending=False)
                 [['language', 'n_apple_users', 'n_total_users']]
          )
 
