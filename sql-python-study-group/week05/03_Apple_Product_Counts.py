@@ -20,7 +20,8 @@ result = (merged.groupby('language')['user_id']
                 .rename('n_total_users')
                 .reset_index()
     )
-    
+
+# outer join 해야함 bc apple device를 사용하지 않는 경우도 있으니까
 result = (result.merge(df, how='outer', on='language')
                 .fillna(0)
                 [['language', 'n_apple_users', 'n_total_users']]

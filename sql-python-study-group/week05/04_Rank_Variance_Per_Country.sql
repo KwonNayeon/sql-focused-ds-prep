@@ -18,5 +18,5 @@ ranked as (
 )
 select country
 from ranked
-where dec_rank > jan_rank
+where dec_rank > jan_rank or dec_rank is null
 ;

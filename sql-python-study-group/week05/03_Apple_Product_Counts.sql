@@ -7,4 +7,5 @@ select
 from playbook_events e
 left join playbook_users u on e.user_id = u.user_id
 group by u.language
+order by count(distinct e.user_id) desc
 ;
