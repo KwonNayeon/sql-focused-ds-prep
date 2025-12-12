@@ -1,3 +1,13 @@
+/*
+-- INTERVAL (시간 간격) → 숫자(초)
+EXTRACT(EPOCH FROM INTERVAL '1 hour 30 minutes')
+-- 결과: 5400 초
+
+-- TIMESTAMP 차이 → 숫자(초)
+EXTRACT(EPOCH FROM ('10:00' - '08:00'))
+-- 결과: 7200 초
+*/
+
 with session as (
     select
         cust_id,
