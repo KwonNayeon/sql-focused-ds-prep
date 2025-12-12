@@ -14,3 +14,6 @@ from session
 where state = 1 and next_state = 0
 group by cust_id
 ;
+
+-- Review Notes:
+-- 2025-12-12: 복습하기
