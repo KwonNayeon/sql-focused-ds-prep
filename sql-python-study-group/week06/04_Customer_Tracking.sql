@@ -1,12 +1,8 @@
 /*
--- INTERVAL (시간 간격) → 숫자(초)
-EXTRACT(EPOCH FROM INTERVAL '1 hour 30 minutes')
--- 결과: 5400 초
-
--- TIMESTAMP 차이 → 숫자(초)
-EXTRACT(EPOCH FROM ('10:00' - '08:00'))
--- 결과: 7200 초
-*/
+ - (end_time - start_time) → 두 시간의 차이를 interval(시간 간격) 타입으로 계산
+ - extract(epoch from ...) → 그 interval을 총 초(seconds) 단위로 변환
+ - / 3600 → 초를 시간으로 변환 (1시간 = 3600초)
+ */
 
 with session as (
     select

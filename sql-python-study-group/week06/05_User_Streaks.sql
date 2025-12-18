@@ -1,3 +1,5 @@
+-- 8월 10일까지의 데이터 중에서 각 유저의 최대 연속 streak를 찾는 문제
+
 WITH unique_visits AS (
     SELECT DISTINCT user_id, date_visited
     FROM user_streaks
