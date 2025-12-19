@@ -1,3 +1,4 @@
+-- 온라인 구매만 카운트해야 함
 with cte as (
   select
     *,
