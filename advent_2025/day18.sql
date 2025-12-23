@@ -34,3 +34,6 @@ SELECT
 FROM candidate_scores
 ORDER BY ratio DESC
 LIMIT 5;
+
+-- Review Notes:
+-- 혼자 못 풀었던 문제, 복습하기
