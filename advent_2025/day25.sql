@@ -1,0 +1,2 @@
+Select 'Ho Ho Ho'
+;
