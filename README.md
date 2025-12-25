@@ -6,30 +6,26 @@ This repository contains my solutions and notes for various SQL challenges and i
 
 ## Current Challenge
 **Technical Interview Preparation**
-- Primary Focus: SQL problems from DataLemur (PostgreSQL 14), LeetCode SQL 50
+- Primary Focus: SQL problems from StrataScratch
 - Additional Areas: Algorithm, Pandas, Statistics, and Machine Learning concepts
 - Based on: "Ace the Data Science Interview"
 
 **Completed**
-- Advent of SQL 2024: All 25 days solved!
-- Link: [Advent of SQL 2024](https://solvesql.com/collections/advent-of-sql-2024/)
+- Advent of SQL 2024-2025: All 25 days solved!
 
 ## Structure
 ```plaintext
 ├── README.md
-├── advent_2024/          # SQL solutions (Completed!)
-│   ├── day01.sql
-│   ├── ...              # day02 ~ day24
-│   └── day25.sql
-├── interview_prep/      # See interview_prep/README.md for details
-│   ├── sql/             # PostgreSQL solutions
-│   ├── algorithm/       # Algorithm and data structure problems
-│   ├── pandas/          # Data preprocessing and manipulation
-│   ├── statistics/      # Statistical concepts and problem-solving
-│   └── ml/              # Machine learning techniques and applied concepts
-└── study/               # Personal SQL study notes
-    ├── oracle_class01.sql
-    └── oracle_class02.sql
+├── advent_2024/              # SQL solutions (Completed)
+├── advent_2025/              # SQL solutions (Completed)
+├── interview_prep/           # See interview_prep/README.md for details
+│   ├── sql/                  # PostgreSQL solutions
+│   ├── algorithm/            # Algorithm and data structure problems
+│   ├── pandas/               # Data preprocessing and manipulation
+│   ├── statistics/           # Statistical concepts and problem-solving
+│   └── ml/                   # Machine learning techniques and applied concepts
+├── sql-python-study-group/   # See sql-python-study-group/README.md for details
+└── study/                    # Personal SQL study notes
 ```
 
 ## Resources
