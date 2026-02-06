@@ -10,3 +10,7 @@ from sat_scores s
 join cte c
 on s.sat_writing = c.median_writing
 ;
+
+-- Review Notes:
+-- 2026-02-06: 함수만 잘 기억해두면 됨
+
