@@ -18,3 +18,6 @@ select
 from cte
 group by host_popularity
 ;
+
+-- Review Notes:
+-- 2026-02-06: 조건문 복습 완료
