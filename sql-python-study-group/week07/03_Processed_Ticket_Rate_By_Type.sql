@@ -5,3 +5,6 @@ select
 from facebook_complaints
 group by type
 ;
+
+-- Review Notes:
+-- 2026-02-08: 복습 완료
