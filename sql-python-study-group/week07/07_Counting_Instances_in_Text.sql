@@ -29,3 +29,17 @@ contents: "Bull market is strong. Bear market too."
 5. WHERE 필터링: bull, bear만 남음
 6. GROUP BY로 카운트
 */
+
+with cte as (
+    select unnest(string_to_array(REPLACE(lower(contents), '.', ''), ' ')) as word
+    from google_file_store
+)
+select
+    word,
+    count(word) as count
+from cte
+where word in ('bull', 'bear')
+group by word
+
+-- Review Notes:
+-- 2026-02-09: 복습 완료
