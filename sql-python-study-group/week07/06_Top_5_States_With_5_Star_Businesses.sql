@@ -19,3 +19,27 @@ select
 from ranked
 where rk <= 5
 ;
+
+with count as (
+    select
+        state,
+        count(business_id) as n_businesses
+    from yelp_business
+    where stars = 5
+    group by state
+),
+rank as (
+    select
+        state,
+        n_businesses,
+        dense_rank() over (order by n_businesses desc) rank
+    from count
+)
+select
+    state,
+    n_businesses
+from rank
+where rank <= 5
+
+-- Review Notes:
+-- 2026-02-09: 복습 완료
