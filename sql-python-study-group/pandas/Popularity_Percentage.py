@@ -1,5 +1,4 @@
 # Grouped Aggregations
-# Import your libraries
 import pandas as pd
 
 df = facebook_friends.copy()
@@ -11,11 +10,8 @@ users = pd.concat([df1, df2])
 
 total_users = users['user1'].nunique()
 
-result = (users.groupby('user1')
-            .size()
-            .reset_index(name='n_friends')
-    )
-    
-result['popularity_percentage'] = result['n_friends'] / total_users * 100
+result = (users.groupby('user1').size().reset_index(name='n_friends'))
 
-result[['user1', 'popularity_percentage']].sort_values('user1', ascending=True)
+result['popularity_percent'] = result['n_friends'] / total_users * 100
+
+result = result[['user1', 'popularity_percent']].sort_values('user1', ascending=True)
