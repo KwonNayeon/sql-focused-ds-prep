@@ -1,15 +1,14 @@
--- 이름 파생변수 만드는 법 복습
-with cte as (
-    SELECT
-        COALESCE(user_firstname, '') || ' ' || COALESCE(user_lastname, '') AS full_name,
+with fullname as (
+    select
+        coalesce(user_firstname, '') || ' ' || coalesce(user_lastname, '') as user_fullname,
         video_id,
         flag_id
-    FROM user_flags
+    from user_flags
     where flag_id is not null
 )
 select
     video_id,
-    count(distinct full_name) as num_unique_users
-from cte
+    count(distinct user_fullname) as num_unique_users
+from fullname
 group by video_id
 ;
