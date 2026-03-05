@@ -19,12 +19,10 @@ seven_days_later as (
     group by a.entry_date
 )
 select
-    d.entry_date,
-    d.premium_paid_accounts,
-    s.premium_paid_accounts_after_7d
-from daily d
-left join seven_days_later s
-    on d.entry_date = s.entry_date
-order by d.entry_date
-limit 7
-;
+    a.entry_date,
+    a.premium_paid_accounts,
+    b.premium_paid_accounts_after_7d
+from daily a
+join seven_days_later b on a.entry_date = b.entry_date
+order by a.entry_date
+limit 7;
