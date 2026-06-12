@@ -20,6 +20,27 @@ select
 from data
 where rn = 1
 
+-- 2026-06-12
+with max_salary as (
+    select
+        id,
+        max(salary) as cur_salary
+    from ms_employee_salary
+    group by id
+)
+select
+    distinct o.id,
+    o.first_name,
+    o.last_name,
+    o.department_id,
+    m.cur_salary
+from ms_employee_salary o
+join max_salary m
+on o.id = m.id and o.salary = m.cur_salary
+order by o.id asc
+;
+
 -- Review Notes:
 -- 2025-11-03: 처음 풂, group by 없이 max 값을 추출하는 법을 몰랐음
 -- 2025-11-04: row_number() 문법 틀림
+-- 2026-06-12: 이전 풀이 참고해서 다시 풀기
