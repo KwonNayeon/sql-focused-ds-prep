@@ -20,25 +20,21 @@ select
 from data
 where rn = 1
 
--- 2026-06-12
-with max_salary as (
+-- 2026-06-15
+with largest as (
     select
-        id,
-        max(salary) as cur_salary
+        *,
+        row_number() over (partition by id order by salary desc) as rn
     from ms_employee_salary
-    group by id
 )
 select
-    distinct o.id,
-    o.first_name,
-    o.last_name,
-    o.department_id,
-    m.cur_salary
-from ms_employee_salary o
-join max_salary m
-on o.id = m.id and o.salary = m.cur_salary
-order by o.id asc
-;
+    id,
+    first_name,
+    last_name,
+    salary,
+    department_id
+from largest
+where rn = 1
 
 -- Review Notes:
 -- 2025-11-03: 처음 풂, group by 없이 max 값을 추출하는 법을 몰랐음
