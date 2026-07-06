@@ -31,7 +31,8 @@ from sent s
 left join accepted a 
     on s.user_id_sender = a.user_id_sender
     and s.user_id_receiver = a.user_id_receiver
-group by s.dateRetryClaude can make mistakes. Please double-check responses.
+group by s.date
 
 -- Review Notes:
 -- 2025-11-27: 조건을 잘 읽고 풀기. 복습 필수
+-- 2026-07-06: 복습
