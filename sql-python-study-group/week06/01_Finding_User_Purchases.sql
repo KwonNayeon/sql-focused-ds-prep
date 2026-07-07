@@ -13,3 +13,7 @@ from orders
 where (created_at-previous_order) between 1 and 7
 and order_number = 2
 ;
+
+-- Review Notes:
+-- 2026-07-07: 복습, 두 번째 구매가 1일에서 7일 사이인 값을 구하는 문제
+
