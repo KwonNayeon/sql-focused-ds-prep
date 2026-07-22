@@ -26,3 +26,4 @@ order by title
 -- Review Notes:
 -- 2025-11-14: 집계함수(SUM, AVG, COUNT 등)는 HAVING에서 사용
 -- 2026-07-10: 복습
+-- 2026-07-22: 복습
