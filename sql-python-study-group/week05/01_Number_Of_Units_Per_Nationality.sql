@@ -11,3 +11,6 @@ where h.age < 30
 group by h.nationality
 order by n_unit desc
 ;
+
+-- Review Notes:
+-- 2026-07-24: 복습
