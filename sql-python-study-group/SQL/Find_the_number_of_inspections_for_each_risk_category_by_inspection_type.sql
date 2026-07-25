@@ -8,3 +8,7 @@ select
 from sf_restaurant_health_violations
 group by inspection_type
 ;
+
+-- Review Notes:
+-- 2026-07-25: 복습, 칼럼명을 문자열('')로 감싸면 안 됨
+
