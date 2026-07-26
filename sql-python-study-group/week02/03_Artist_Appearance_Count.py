@@ -13,3 +13,5 @@ result = (df.groupby('artist')['id']
 
 # Review Notes:
 # 2025-11-13: 코드 스타일 가독성있게 바꿔봄
+# 2026-07-26: 복습
+
