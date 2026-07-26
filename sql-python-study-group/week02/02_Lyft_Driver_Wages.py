@@ -8,3 +8,5 @@ result = lyft_drivers[(lyft_drivers['yearly_salary'] <= 30000) | (lyft_drivers['
 
 # Review Notes:
 # 2025-11-12: OR 조건 필터링 배움
+# 2026-07-26: 복습
+
