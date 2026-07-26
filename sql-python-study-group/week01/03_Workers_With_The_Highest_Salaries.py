@@ -33,4 +33,6 @@ best_paid_title = result['worker_title']
 '''
 Review Notes:
 2025-11-05: 처음 풂, 위의 문제들과 비슷해서 쉬울줄 알았는데, 생각보다 쉽지 않았다.
+2026-07-26: 복습
 '''
+
