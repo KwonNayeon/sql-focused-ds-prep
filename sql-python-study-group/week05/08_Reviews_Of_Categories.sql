@@ -26,3 +26,7 @@ from yelp_business;
 -- Bar         | 100  ← business_id 1에서 생성
 -- Shopping    | 50   ← business_id 2에서 생성
 -- Retail      | 50   ← business_id 2에서 생성
+
+-- Review Notes:
+-- 2026-07-26: 복습
+-- unnest(), string_to_array()는 PostgreSQL 환경에서만 사용 가능
