@@ -6,3 +6,6 @@ select
 from titanic
 group by survived
 ;
+
+-- Review Notes:
+-- 2026-07-27: 복습
