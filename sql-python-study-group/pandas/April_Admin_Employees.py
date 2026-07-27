@@ -7,3 +7,6 @@ worker.head()
 
 result = (worker.query("joining_date.dt.month >= 4 and department == 'Admin'")
                 .groupby('department')['worker_id'].agg(n_workers='count'))
+
+# Review Notes:
+# 2026-07-27: 복습
