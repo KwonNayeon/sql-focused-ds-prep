@@ -10,3 +10,6 @@ result = (df.groupby('trackname')['position']
             .count()
             .reset_index(name='n_occurances')
             .sort_values('n_occurances', ascending=False))
+
+# Review Notes:
+# 2026-07-27: 복습
