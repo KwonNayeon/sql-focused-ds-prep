@@ -22,3 +22,6 @@ df = (df.dropna(subset=['violation_id'])  # query 대신
         .count()
         .reset_index(name='n_violations')
     )
+
+# Review Notes:
+# 2026-07-27: 복습
