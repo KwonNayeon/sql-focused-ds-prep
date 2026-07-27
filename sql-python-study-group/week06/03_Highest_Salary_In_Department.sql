@@ -1,15 +1,17 @@
-with cte as (
-    select
-        department,
-        first_name,
-        max(salary) over (partition by department order by salary desc) as highest_salary,
-        rank() over (partition by department order by salary desc) as rn
-    from employee
-)
 select
     department,
     first_name,
-    highest_salary
-from cte
-where rn = 1
+    salary
+from (
+    select
+        department,
+        first_name,
+        salary,
+        rank() over (partition by department order by salary desc) as rk
+    from employee
+)
+where rk = 1
 ;
+
+-- Review Notes:
+-- 2026-07-27: 복습
