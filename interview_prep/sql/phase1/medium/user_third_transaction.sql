@@ -56,3 +56,6 @@ SELECT
 FROM data 
 WHERE rn = 3
 ;
+
+-- Review Notes:
+-- 2026-07-31: 복습
