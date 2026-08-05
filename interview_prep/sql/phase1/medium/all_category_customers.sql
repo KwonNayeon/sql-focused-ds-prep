@@ -37,3 +37,13 @@ FROM (
 ) t
 WHERE product_count = (SELECT COUNT(DISTINCT product_category) FROM products)
 ;
+
+-- 다른 풀이
+SELECT
+  a.customer_id
+FROM customer_contracts a
+join products b
+on a.product_id = b.product_id
+group by a.customer_id
+having count(distinct b.product_category) = (select count(distinct product_category) from products)
+;
