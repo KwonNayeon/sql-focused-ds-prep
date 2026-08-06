@@ -47,3 +47,6 @@ on a.product_id = b.product_id
 group by a.customer_id
 having count(distinct b.product_category) = (select count(distinct product_category) from products)
 ;
+
+-- Review Notes:
+-- 2026-08-06: 복습, having 절 사용할 때 주의
