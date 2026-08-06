@@ -46,3 +46,19 @@ SELECT
 FROM orders
 ORDER BY order_id
 ;
+
+-- 다른 풀이
+with order_counts as (
+  select 
+    count(order_id) as total_orders
+  from orders
+)
+select
+  case when order_id % 2 != 0 and order_id != total_orders then order_id + 1
+    when order_id %2 != 0 and order_id = total_orders then order_id
+    else order_id - 1
+  end as corrected_order_id,
+  item
+from orders
+cross join order_counts
+order by corrected_order_id
