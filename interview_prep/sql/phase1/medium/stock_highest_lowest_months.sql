@@ -50,3 +50,27 @@ INNER JOIN lowest_prices AS lowest
     AND highest.row_num = 1
     AND lowest.row_num = 1
 ORDER BY highest.ticker;
+
+-- 다른 풀이
+with cte1 as (
+  SELECT
+    *,
+    to_char(date, 'Mon-YYYY') as month
+  FROM stock_prices
+),
+cte2 as (
+  select
+    *,
+    rank() over (partition by ticker order by open asc) as rn_low,
+    rank() over (partition by ticker order by open desc) as rn_high
+  from cte1
+)
+select
+  ticker,
+  max(case when rn_high = 1 then month end) as highest_mth,
+  max(case when rn_high = 1 then open end) as highest_open,
+  max(case when rn_low = 1 then month end) as lowest_mth,
+  max(case when rn_low = 1 then open end) as lowest_open
+from cte2
+group by ticker
+;
