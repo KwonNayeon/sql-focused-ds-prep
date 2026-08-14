@@ -1,4 +1,4 @@
-with cte as (
+with ranked as (
   SELECT
     a.category_name,
     a.product_name,
@@ -10,6 +10,9 @@ with cte as (
 select
   category_name,
   product_name
-from cte
+from ranked
 where rk=1
 ;
+
+-- Review Notes:
+-- 2026-08-14: 복습하기
