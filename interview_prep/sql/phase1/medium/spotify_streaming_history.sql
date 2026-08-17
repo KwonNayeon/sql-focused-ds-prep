@@ -12,3 +12,5 @@ order by song_plays desc
 
 -- Review Notes:
 -- 2026-08-14: join 조건, null값 처리가 까다로운 문제 (한 테이블에만 존재하는 데이터 처리 때문), 복습하기
+-- 2026-08-17: where 절에 listen time이 null인 경우를 꼭 처리해줘야 함
+ 
