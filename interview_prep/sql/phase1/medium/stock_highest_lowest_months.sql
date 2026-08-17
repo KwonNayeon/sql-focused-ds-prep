@@ -69,3 +69,6 @@ select
 from cte
 group by ticker
 ;
+
+-- Review Notes:
+-- 2026-08-17: 그룹당 하나의 조건에 맞는 행의 값을 가져오기 위해 max를 사용
