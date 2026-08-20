@@ -12,24 +12,23 @@
 --   - receiver JOIN: 수신자의 국가 정보
 -- ============================================================
 
--- My answer
-with data as (
- SELECT
-   sum(case when caller.country_id <> receiver.country_id 
-     then 1 else 0 end) as international_calls,
-   count(*) as total_calls
- from phone_calls as calls
- left join phone_info as caller
-   on calls.caller_id = caller.caller_id
- left join phone_info as receiver
-   on calls.receiver_id = receiver.caller_id
+-- 풀이 1
+with cte as (
+  select
+    caller.country_id as caller_country,
+    receiver.country_id as receiver_country
+  from phone_calls calls
+  left join phone_info caller
+  on calls.caller_id = caller.caller_id
+  left join phone_info receiver
+  on calls.receiver_id = receiver.caller_id
 )
-SELECT
- round(100.0 * international_calls::decimal/total_calls, 1) as international_calls_pct
-from data
- ;
+select
+  round(count(case when caller_country != receiver_country then 1 end)*1.0/count(*)*100, 1) as international_call_pct
+from cte
+;
 
--- Solution
+-- 솔루션
 SELECT
  round(
    100.0 * sum(case when caller.country_id <> receiver.country_id 
@@ -42,3 +41,6 @@ left join phone_info as caller
 left join phone_info as receiver
  on calls.receiver_id = receiver.caller_id
 ;
+
+-- Review Notes:
+-- 2026-08-20: 퍼센트 계산할 때 sum(), count() 둘 다 가능, 문법만 조금 다름
