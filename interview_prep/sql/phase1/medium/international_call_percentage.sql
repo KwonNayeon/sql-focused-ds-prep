@@ -44,3 +44,4 @@ left join phone_info as receiver
 
 -- Review Notes:
 -- 2026-08-20: 퍼센트 계산할 때 sum(), count() 둘 다 가능, 문법만 조금 다름
+-- 2026-08-21: join 할 때 주의하기. caller와 receiver의 국가 정보를 가져오기 위해 동일 테이블을 두 번 붙이는 것 
