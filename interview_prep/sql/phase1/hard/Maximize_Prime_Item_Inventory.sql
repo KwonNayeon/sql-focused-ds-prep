@@ -37,3 +37,4 @@ order by item_type desc;
 -- Review Notes:
 -- 2026-08-27: 내일 복습하기
 -- 2026-08-28: 풀이는 어느정도 이해 되는데, 혼자 풀기는 어려울듯
+-- 2026-09-01: 쿼리 직접 짜봄, 마지막에 prime_batch_count * prime_sqft (개수*면적) 실수만 조심하기
