@@ -28,3 +28,4 @@ from searches_expanded
 
 -- Review Notes:
 -- 2026-08-31: 어려운 문제, 나중에 복습하기
+-- 2026-09-01: 복습 완료
