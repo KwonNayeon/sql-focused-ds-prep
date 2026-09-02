@@ -1,10 +1,9 @@
--- ============================================================
--- Unfinished Parts
--- Filename: unfinished_parts.sql
--- ============================================================
-
-SELECT 
-   part,
-   assembly_step
+SELECT
+  part,
+  assembly_step
 FROM parts_assembly
-WHERE finish_date IS NULL;
+where finish_date is null
+;
+
+-- Review Notes:
+-- 2026-09-02: 복습 완료
